@@ -62,6 +62,11 @@
     }
 }
 
+- (CGSize)collectionViewContentSize {
+    float height = MAX(self.maxOddY, self.maxEvenY);
+    return CGSizeMake(self.collectionView.bounds.size.width, height);
+}
+
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     return self.itemAttributes;
 }

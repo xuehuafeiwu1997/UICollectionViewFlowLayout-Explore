@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10A06C85D1AA2DE81562BA1D /* libPods-自定义flowLayout探究.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5334C6624F104A1D4869EE /* libPods-自定义flowLayout探究.a */; };
+		B60959E32522CAC1002828D2 /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B60959E22522CAC1002828D2 /* WaterFlowLayout.m */; };
+		B627B5392521F6F000DED38A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5382521F6F000DED38A /* AppDelegate.m */; };
+		B627B5442521F6F400DED38A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B627B5432521F6F400DED38A /* Assets.xcassets */; };
+		B627B5472521F6F400DED38A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B627B5452521F6F400DED38A /* LaunchScreen.storyboard */; };
+		B627B54A2521F6F400DED38A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5492521F6F400DED38A /* main.m */; };
+		B627B5522521F72C00DED38A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5512521F72C00DED38A /* MainViewController.m */; };
+		B627B5552521F76E00DED38A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5542521F76E00DED38A /* FirstViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		34922FE93B386E635758A52A /* Pods-自定义flowLayout探究.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-自定义flowLayout探究.release.xcconfig"; path = "Target Support Files/Pods-自定义flowLayout探究/Pods-自定义flowLayout探究.release.xcconfig"; sourceTree = "<group>"; };
+		69CDA317CFDBC198D94C5114 /* Pods-自定义flowLayout探究.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-自定义flowLayout探究.debug.xcconfig"; path = "Target Support Files/Pods-自定义flowLayout探究/Pods-自定义flowLayout探究.debug.xcconfig"; sourceTree = "<group>"; };
+		6B5334C6624F104A1D4869EE /* libPods-自定义flowLayout探究.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-自定义flowLayout探究.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60959E12522CAC1002828D2 /* WaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
+		B60959E22522CAC1002828D2 /* WaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
+		B627B5342521F6F000DED38A /* 自定义flowLayout探究.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义flowLayout探究.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B627B5372521F6F000DED38A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B627B5382521F6F000DED38A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B627B5432521F6F400DED38A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B627B5462521F6F400DED38A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B627B5482521F6F400DED38A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B627B5492521F6F400DED38A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B627B5502521F72C00DED38A /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B627B5512521F72C00DED38A /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B627B5532521F76E00DED38A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		B627B5542521F76E00DED38A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B627B5312521F6F000DED38A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A06C85D1AA2DE81562BA1D /* libPods-自定义flowLayout探究.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A9CAC15CEB716E30625F0AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B5334C6624F104A1D4869EE /* libPods-自定义flowLayout探究.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F54AA6B9FBA2DAFC70755BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69CDA317CFDBC198D94C5114 /* Pods-自定义flowLayout探究.debug.xcconfig */,
+				34922FE93B386E635758A52A /* Pods-自定义flowLayout探究.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B627B52B2521F6F000DED38A = {
+			isa = PBXGroup;
+			children = (
+				B627B5362521F6F000DED38A /* 自定义flowLayout探究 */,
+				B627B5352521F6F000DED38A /* Products */,
+				7F54AA6B9FBA2DAFC70755BE /* Pods */,
+				5A9CAC15CEB716E30625F0AA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B627B5352521F6F000DED38A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B627B5342521F6F000DED38A /* 自定义flowLayout探究.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B627B5362521F6F000DED38A /* 自定义flowLayout探究 */ = {
+			isa = PBXGroup;
+			children = (
+				B627B5372521F6F000DED38A /* AppDelegate.h */,
+				B627B5382521F6F000DED38A /* AppDelegate.m */,
+				B627B5502521F72C00DED38A /* MainViewController.h */,
+				B627B5512521F72C00DED38A /* MainViewController.m */,
+				B627B5532521F76E00DED38A /* FirstViewController.h */,
+				B627B5542521F76E00DED38A /* FirstViewController.m */,
+				B60959E12522CAC1002828D2 /* WaterFlowLayout.h */,
+				B60959E22522CAC1002828D2 /* WaterFlowLayout.m */,
+				B627B5432521F6F400DED38A /* Assets.xcassets */,
+				B627B5452521F6F400DED38A /* LaunchScreen.storyboard */,
+				B627B5482521F6F400DED38A /* Info.plist */,
+				B627B5492521F6F400DED38A /* main.m */,
+			);
+			path = "自定义flowLayout探究";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B627B5332521F6F000DED38A /* 自定义flowLayout探究 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B627B54D2521F6F400DED38A /* Build configuration list for PBXNativeTarget "自定义flowLayout探究" */;
+			buildPhases = (
+				D75C745FBBA6680363DC2420 /* [CP] Check Pods Manifest.lock */,
+				B627B5302521F6F000DED38A /* Sources */,
+				B627B5312521F6F000DED38A /* Frameworks */,
+				B627B5322521F6F000DED38A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "自定义flowLayout探究";
+			productName = "自定义flowLayout探究";
+			productReference = B627B5342521F6F000DED38A /* 自定义flowLayout探究.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B627B52C2521F6F000DED38A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "许明洋";
+				TargetAttributes = {
+					B627B5332521F6F000DED38A = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = B627B52F2521F6F000DED38A /* Build configuration list for PBXProject "自定义flowLayout探究" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B627B52B2521F6F000DED38A;
+			productRefGroup = B627B5352521F6F000DED38A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B627B5332521F6F000DED38A /* 自定义flowLayout探究 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B627B5322521F6F000DED38A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B627B5472521F6F400DED38A /* LaunchScreen.storyboard in Resources */,
+				B627B5442521F6F400DED38A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D75C745FBBA6680363DC2420 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-自定义flowLayout探究-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B627B5302521F6F000DED38A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B627B5392521F6F000DED38A /* AppDelegate.m in Sources */,
+				B627B5522521F72C00DED38A /* MainViewController.m in Sources */,
+				B627B54A2521F6F400DED38A /* main.m in Sources */,
+				B627B5552521F76E00DED38A /* FirstViewController.m in Sources */,
+				B60959E32522CAC1002828D2 /* WaterFlowLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B627B5452521F6F400DED38A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B627B5462521F6F400DED38A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B627B54B2521F6F400DED38A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B627B54C2521F6F400DED38A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B627B54E2521F6F400DED38A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69CDA317CFDBC198D94C5114 /* Pods-自定义flowLayout探究.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NC2M6D7A5Q;
+				INFOPLIST_FILE = "自定义flowLayout探究/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.greatyun.---flowLayout--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B627B54F2521F6F400DED38A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34922FE93B386E635758A52A /* Pods-自定义flowLayout探究.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NC2M6D7A5Q;
+				INFOPLIST_FILE = "自定义flowLayout探究/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.greatyun.---flowLayout--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B627B52F2521F6F000DED38A /* Build configuration list for PBXProject "自定义flowLayout探究" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B627B54B2521F6F400DED38A /* Debug */,
+				B627B54C2521F6F400DED38A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B627B54D2521F6F400DED38A /* Build configuration list for PBXNativeTarget "自定义flowLayout探究" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B627B54E2521F6F400DED38A /* Debug */,
+				B627B54F2521F6F400DED38A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B627B52C2521F6F000DED38A /* Project object */;
+}

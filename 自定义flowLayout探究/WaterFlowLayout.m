@@ -4,7 +4,7 @@
 //
 //  Created by 许明洋 on 2020/9/29.
 //  Copyright © 2020 许明洋. All rights reserved.
-//
+//这种实现有缺陷，不足之处在于这种写法是默认只会有两列，如果是多列的情况下，不适用
 
 #import "WaterFlowLayout.h"
 

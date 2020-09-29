@@ -1,29 +1,30 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  自定义flowLayout探究
 //
-//  Created by 许明洋 on 2020/9/28.
+//  Created by 许明洋 on 2020/9/29.
 //  Copyright © 2020 许明洋. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "SecondViewController.h"
 #import "Masonry.h"
 #import "WaterFlowLayout.h"
 
-@interface FirstViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,WaterFlowLayoutDelegate>
+@interface SecondViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray *array;//用于存储高度数据
+@property (nonatomic, strong) NSMutableArray *widthArray;//用于存储宽度数据
+@property (nonatomic, strong) NSMutableArray *heightArray;//用于存储高度数据
 
 @end
 
-@implementation FirstViewController
+@implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"瀑布流的两列自定义实现";
+    self.title = @"瀑布流的多列自定义展示";
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
     [self.view addSubview:self.collectionView];
@@ -36,8 +37,7 @@
     if (_collectionView) {
         return _collectionView;
     }
-    WaterFlowLayout *layout = [[WaterFlowLayout alloc] init];
-    layout.delegate = self;
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsVerticalScrollIndicator = NO;
@@ -47,7 +47,7 @@
     return _collectionView;
 }
 
-#pragma mark -UICollectionViewDelegate/UICollectionViewDelegate
+#pragma mark - UICollectionViewDelegate/dataSource/flowLayout
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -66,18 +66,12 @@
     //点击效果不需要实现
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 10;
-}
-
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 10;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    float width = self.view.bounds.size.width - 10 - 10 - 10;
-    float height = [[self.array objectAtIndex:indexPath.row] floatValue];
-    return CGSizeMake(width / 2, height);
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 10;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -87,12 +81,27 @@
     return UIEdgeInsetsZero;
 }
 
-- (NSMutableArray *)array {
-    if (_array) {
-        return _array;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    float width = [[self.widthArray objectAtIndex:indexPath.row] floatValue];
+    float width = self.view.bounds.size.width - 10 * 2 - 10 * 2;
+    float height = [[self.heightArray objectAtIndex:indexPath.row] floatValue];
+    return CGSizeMake(width / 3, height);
+}
+
+- (NSMutableArray *)widthArray {
+    if (_widthArray) {
+        return _widthArray;
     }
-    _array = [NSMutableArray arrayWithObjects:@(100),@(150),@(150),@(50),@(130),@(180),@(200),@(100),@(110),@(200), nil];
-    return _array;
+    _widthArray = [NSMutableArray arrayWithObjects:@(100),@(100),@(100),@(100),@(100),@(100),@(100),@(100),@(100),@(100),nil];
+    return _widthArray;
+}
+
+- (NSMutableArray *)heightArray {
+    if (_heightArray) {
+        return _heightArray;
+    }
+    _heightArray = [NSMutableArray arrayWithObjects:@(100),@(150),@(150),@(50),@(130),@(180),@(200),@(100),@(110),@(200), nil];
+    return _heightArray;
 }
 
 - (void)dealloc {

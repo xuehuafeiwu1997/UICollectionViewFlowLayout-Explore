@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		10A06C85D1AA2DE81562BA1D /* libPods-自定义flowLayout探究.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5334C6624F104A1D4869EE /* libPods-自定义flowLayout探究.a */; };
 		B60959E32522CAC1002828D2 /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B60959E22522CAC1002828D2 /* WaterFlowLayout.m */; };
+		B60959E625231A53002828D2 /* WaterFlowLayoutNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */; };
+		B60959E925231CE5002828D2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60959E825231CE5002828D2 /* SecondViewController.m */; };
 		B627B5392521F6F000DED38A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5382521F6F000DED38A /* AppDelegate.m */; };
 		B627B5442521F6F400DED38A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B627B5432521F6F400DED38A /* Assets.xcassets */; };
 		B627B5472521F6F400DED38A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B627B5452521F6F400DED38A /* LaunchScreen.storyboard */; };
@@ -23,6 +25,10 @@
 		6B5334C6624F104A1D4869EE /* libPods-自定义flowLayout探究.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-自定义flowLayout探究.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60959E12522CAC1002828D2 /* WaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
 		B60959E22522CAC1002828D2 /* WaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
+		B60959E425231A53002828D2 /* WaterFlowLayoutNew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayoutNew.h; sourceTree = "<group>"; };
+		B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayoutNew.m; sourceTree = "<group>"; };
+		B60959E725231CE5002828D2 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B60959E825231CE5002828D2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B627B5342521F6F000DED38A /* 自定义flowLayout探究.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义flowLayout探究.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B627B5372521F6F000DED38A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B627B5382521F6F000DED38A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,8 +98,12 @@
 				B627B5512521F72C00DED38A /* MainViewController.m */,
 				B627B5532521F76E00DED38A /* FirstViewController.h */,
 				B627B5542521F76E00DED38A /* FirstViewController.m */,
+				B60959E725231CE5002828D2 /* SecondViewController.h */,
+				B60959E825231CE5002828D2 /* SecondViewController.m */,
 				B60959E12522CAC1002828D2 /* WaterFlowLayout.h */,
 				B60959E22522CAC1002828D2 /* WaterFlowLayout.m */,
+				B60959E425231A53002828D2 /* WaterFlowLayoutNew.h */,
+				B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */,
 				B627B5432521F6F400DED38A /* Assets.xcassets */,
 				B627B5452521F6F400DED38A /* LaunchScreen.storyboard */,
 				B627B5482521F6F400DED38A /* Info.plist */,
@@ -199,6 +209,8 @@
 			files = (
 				B627B5392521F6F000DED38A /* AppDelegate.m in Sources */,
 				B627B5522521F72C00DED38A /* MainViewController.m in Sources */,
+				B60959E625231A53002828D2 /* WaterFlowLayoutNew.m in Sources */,
+				B60959E925231CE5002828D2 /* SecondViewController.m in Sources */,
 				B627B54A2521F6F400DED38A /* main.m in Sources */,
 				B627B5552521F76E00DED38A /* FirstViewController.m in Sources */,
 				B60959E32522CAC1002828D2 /* WaterFlowLayout.m in Sources */,

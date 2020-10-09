@@ -17,6 +17,7 @@
 		B627B54A2521F6F400DED38A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5492521F6F400DED38A /* main.m */; };
 		B627B5522521F72C00DED38A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5512521F72C00DED38A /* MainViewController.m */; };
 		B627B5552521F76E00DED38A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5542521F76E00DED38A /* FirstViewController.m */; };
+		B6E817CF25305A3D002BE3DD /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E817CE25305A3D002BE3DD /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		B627B5512521F72C00DED38A /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B627B5532521F76E00DED38A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		B627B5542521F76E00DED38A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		B6E817CD25305A3D002BE3DD /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		B6E817CE25305A3D002BE3DD /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				B627B5542521F76E00DED38A /* FirstViewController.m */,
 				B60959E725231CE5002828D2 /* SecondViewController.h */,
 				B60959E825231CE5002828D2 /* SecondViewController.m */,
+				B6E817CD25305A3D002BE3DD /* ThirdViewController.h */,
+				B6E817CE25305A3D002BE3DD /* ThirdViewController.m */,
 				B60959E12522CAC1002828D2 /* WaterFlowLayout.h */,
 				B60959E22522CAC1002828D2 /* WaterFlowLayout.m */,
 				B60959E425231A53002828D2 /* WaterFlowLayoutNew.h */,
@@ -209,6 +214,7 @@
 			files = (
 				B627B5392521F6F000DED38A /* AppDelegate.m in Sources */,
 				B627B5522521F72C00DED38A /* MainViewController.m in Sources */,
+				B6E817CF25305A3D002BE3DD /* ThirdViewController.m in Sources */,
 				B60959E625231A53002828D2 /* WaterFlowLayoutNew.m in Sources */,
 				B60959E925231CE5002828D2 /* SecondViewController.m in Sources */,
 				B627B54A2521F6F400DED38A /* main.m in Sources */,

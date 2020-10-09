@@ -49,9 +49,11 @@
             } else {
                 self.xOffset = sectionInsets.left;
                 self.yOffset = self.yOffset + self.minimumLineSpacing + self.maxY;
+                self.maxY = itemSize.height;
                 UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
                 attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);
                 [self.itemAttributes addObject:attributes];
+                self.xOffset = self.xOffset + itemSize.width + self.minimumInteritemSpacing;
             }
         }
     }

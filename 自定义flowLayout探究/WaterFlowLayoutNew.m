@@ -60,4 +60,8 @@
     return self.itemAttributes;
 }
 
+- (CGSize)collectionViewContentSize {
+    return CGSizeMake(self.collectionView.bounds.size.width, self.yOffset + self.maxY);
+}
+
 @end

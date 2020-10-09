@@ -34,12 +34,9 @@
         self.xOffset = sectionInsets.left;
         self.yOffset = sectionInsets.top;
         self.maxY = self.yOffset;
-        NSMutableArray *heightArray = [NSMutableArray array];
         for (int j = 0; j < itemsCount; j++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:j inSection:i];
             CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
-            [heightArray addObject:@(itemSize.height)];
-            NSInteger perLineCount = floorf((self.collectionView.bounds.size.width - sectionInsets.left - sectionInsets.right + self.minimumInteritemSpacing) / (itemSize.width + self.minimumInteritemSpacing));
             if (self.xOffset + sectionInsets.right + itemSize.width <= self.collectionView.bounds.size.width) {
                 UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
                 attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);

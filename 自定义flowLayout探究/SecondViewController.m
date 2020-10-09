@@ -84,17 +84,17 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    float width = [[self.widthArray objectAtIndex:indexPath.row] floatValue];
-    float width = self.view.bounds.size.width - 10 * 2 - 10 * 2;
+    float width = [[self.widthArray objectAtIndex:indexPath.row] floatValue];
+//    float width = self.view.bounds.size.width - 10 * 2 - 10 * 2;
     float height = [[self.heightArray objectAtIndex:indexPath.row] floatValue];
-    return CGSizeMake(width / 3, height);
+    return CGSizeMake(width , height);
 }
 
 - (NSMutableArray *)widthArray {
     if (_widthArray) {
         return _widthArray;
     }
-    _widthArray = [NSMutableArray arrayWithObjects:@(100),@(100),@(100),@(100),@(100),@(100),@(100),@(100),@(100),@(100),nil];
+    _widthArray = [NSMutableArray arrayWithObjects:@(50),@(100),@(150),@(200),@(150),@(100),@(85),@(100),@(50),@(100),nil];
     return _widthArray;
 }
 

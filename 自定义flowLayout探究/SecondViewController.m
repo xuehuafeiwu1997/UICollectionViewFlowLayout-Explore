@@ -8,9 +8,9 @@
 
 #import "SecondViewController.h"
 #import "Masonry.h"
-#import "WaterFlowLayout.h"
+#import "WaterFlowLayoutNew.h"
 
-@interface SecondViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface SecondViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,WaterFlowLayoutNewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *widthArray;//用于存储宽度数据
@@ -37,7 +37,9 @@
     if (_collectionView) {
         return _collectionView;
     }
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    WaterFlowLayoutNew *layout = [[WaterFlowLayoutNew alloc] init];
+    layout.delegate = self;
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsVerticalScrollIndicator = NO;

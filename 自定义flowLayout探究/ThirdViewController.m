@@ -81,8 +81,8 @@
         return _collectionView;
     }
 //    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    FirstCellZoomInLayout *layout = [[FirstCellZoomInLayout alloc] init];
-//    FirstCellZoomInLayoutTwo *layout = [[FirstCellZoomInLayoutTwo alloc] init];
+//    FirstCellZoomInLayout *layout = [[FirstCellZoomInLayout alloc] init];
+    FirstCellZoomInLayoutTwo *layout = [[FirstCellZoomInLayoutTwo alloc] init];
     layout.delegate = self;
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];

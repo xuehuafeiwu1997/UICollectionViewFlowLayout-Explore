@@ -67,7 +67,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "302B8CEB-F042-4247-917C-F7A7E0A66DFF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x81ea;&#x5b9a;&#x4e49;flowLayout&#x63a2;&#x7a76;/FirstCellZoomInLayoutTwo.m"
@@ -83,7 +83,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5EC97ED5-73EF-4EA1-BA76-6F946E615B1D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x81ea;&#x5b9a;&#x4e49;flowLayout&#x63a2;&#x7a76;/FirstCellZoomInLayoutTwo.m"
@@ -92,6 +92,22 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "-layoutAttributesForElementsInRect:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1A5BBFD-1C7A-4765-9E1E-C9618DFD82B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x81ea;&#x5b9a;&#x4e49;flowLayout&#x63a2;&#x7a76;/FirstCellZoomInLayoutTwo.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-targetContentOffsetForProposedContentOffset:withScrollingVelocity:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

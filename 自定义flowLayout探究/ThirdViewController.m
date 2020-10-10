@@ -8,8 +8,9 @@
 
 #import "ThirdViewController.h"
 #import "Masonry.h"
+#import "FirstCellZoomInLayout.h"
 
-@interface ThirdViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface ThirdViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FirstCellZoomInLayoutDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -28,11 +29,15 @@
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.centerY.equalTo(self.view);
-        make.height.equalTo(@120);
+        make.height.equalTo(@200);
     }];
 }
 
 #pragma mark - delegate/dataSource
+- (CGSize)sizeForFirstCell {
+    return CGSizeMake(150, 150);
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -74,8 +79,9 @@
     if (_collectionView) {
         return _collectionView;
     }
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;//设置滑动方向为水平方向
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    FirstCellZoomInLayout *layout = [[FirstCellZoomInLayout alloc] init];
+    layout.delegate = self;
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.showsHorizontalScrollIndicator = NO;

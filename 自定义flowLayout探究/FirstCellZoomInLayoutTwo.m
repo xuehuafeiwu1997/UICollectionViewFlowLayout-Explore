@@ -26,7 +26,7 @@
     NSArray *originalArr = [super layoutAttributesForElementsInRect:rect];
     UIEdgeInsets sectionInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:0];
     CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    CGRect first = CGRectMake(sectionInsets.left, sectionInsets.top, itemSize.width, itemSize.height);
+    CGRect first = CGRectMake(sectionInsets.left, sectionInsets.top + self.collectionView.contentOffset.y, itemSize.width, itemSize.height);
     CGSize firstCellSize = [self.delegate sizeForFirstCell];
     CGFloat totalOffset = 0;
     for (UICollectionViewLayoutAttributes *attributes in originalArr) {
@@ -46,6 +46,10 @@
         }
     }
     return originalArr;
+}
+
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+    return YES;
 }
 
 @end

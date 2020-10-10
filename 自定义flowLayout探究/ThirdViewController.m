@@ -9,8 +9,9 @@
 #import "ThirdViewController.h"
 #import "Masonry.h"
 #import "FirstCellZoomInLayout.h"
+#import "FirstCellZoomInLayoutTwo.h"
 
-@interface ThirdViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FirstCellZoomInLayoutDelegate>
+@interface ThirdViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FirstCellZoomInLayoutDelegate,FirstCellZoomInLayoutTwoDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -35,7 +36,7 @@
 
 #pragma mark - delegate/dataSource
 - (CGSize)sizeForFirstCell {
-    return CGSizeMake(150, 150);
+    return CGSizeMake(120, 150);
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -81,6 +82,7 @@
     }
 //    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     FirstCellZoomInLayout *layout = [[FirstCellZoomInLayout alloc] init];
+//    FirstCellZoomInLayoutTwo *layout = [[FirstCellZoomInLayoutTwo alloc] init];
     layout.delegate = self;
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];

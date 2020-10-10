@@ -17,6 +17,7 @@
 		B627B54A2521F6F400DED38A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5492521F6F400DED38A /* main.m */; };
 		B627B5522521F72C00DED38A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5512521F72C00DED38A /* MainViewController.m */; };
 		B627B5552521F76E00DED38A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5542521F76E00DED38A /* FirstViewController.m */; };
+		B69044F82531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */; };
 		B6E817CF25305A3D002BE3DD /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E817CE25305A3D002BE3DD /* ThirdViewController.m */; };
 		B6E817D22530645D002BE3DD /* FirstCellZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,8 @@
 		B627B5512521F72C00DED38A /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B627B5532521F76E00DED38A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		B627B5542521F76E00DED38A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		B69044F62531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCellZoomInLayoutTwo.h; sourceTree = "<group>"; };
+		B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstCellZoomInLayoutTwo.m; sourceTree = "<group>"; };
 		B6E817CD25305A3D002BE3DD /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		B6E817CE25305A3D002BE3DD /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		B6E817D02530645D002BE3DD /* FirstCellZoomInLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCellZoomInLayout.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */,
 				B6E817D02530645D002BE3DD /* FirstCellZoomInLayout.h */,
 				B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */,
+				B69044F62531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.h */,
+				B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */,
 				B627B5432521F6F400DED38A /* Assets.xcassets */,
 				B627B5452521F6F400DED38A /* LaunchScreen.storyboard */,
 				B627B5482521F6F400DED38A /* Info.plist */,
@@ -226,6 +231,7 @@
 				B627B5552521F76E00DED38A /* FirstViewController.m in Sources */,
 				B60959E32522CAC1002828D2 /* WaterFlowLayout.m in Sources */,
 				B6E817D22530645D002BE3DD /* FirstCellZoomInLayout.m in Sources */,
+				B69044F82531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

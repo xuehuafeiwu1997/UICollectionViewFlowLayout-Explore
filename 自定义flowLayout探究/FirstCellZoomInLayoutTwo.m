@@ -66,11 +66,17 @@
     CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     CGFloat adjustOffsetX = CGFLOAT_MAX;
     CGFloat finalPointX = 0;
-    do {
-        adjustOffsetX = finalPointX - proposedContentOffset.x;
-        finalPointX += itemSize.width + self.minimumInteritemSpacing;
-    } while (ABS(adjustOffsetX) > ABS(finalPointX - proposedContentOffset.x));
-    CGPoint finalPoint = CGPointMake(proposedContentOffset.x + adjustOffsetX, proposedContentOffset.y);
+    /*
+     需要尝试一下有没有其他的思路和方法
+     */
+//    do {
+//        adjustOffsetX = finalPointX - proposedContentOffset.x;
+//        finalPointX += itemSize.width + self.minimumInteritemSpacing;
+//    } while (ABS(adjustOffsetX) > ABS(finalPointX - proposedContentOffset.x));
+//    CGPoint finalPoint = CGPointMake(proposedContentOffset.x + adjustOffsetX, proposedContentOffset.y);
+    NSInteger index = ceil(proposedContentOffset.x / (itemSize.width + self.minimumInteritemSpacing));
+    finalPointX = (itemSize.width + self.minimumInteritemSpacing) * index;
+    CGPoint finalPoint = CGPointMake(finalPointX, proposedContentOffset.y);
     return finalPoint;
 }
 

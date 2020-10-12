@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSMutableArray<UICollectionViewLayoutAttributes *> *itemAttributes;
 @property (nonatomic) CGFloat xOffset;
 @property (nonatomic) CGFloat yOffset;
-@property (nonatomic) CGFloat maxY;
 @property (nonatomic) NSInteger perLineCount;
 
 @end
@@ -27,13 +26,11 @@
     self.itemAttributes = [NSMutableArray array];
     self.xOffset = 0;
     self.yOffset = 0;
-    self.maxY = 0;
     
     NSInteger itemCount = [self.collectionView numberOfItemsInSection:0];
     UIEdgeInsets sectionInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:0];
     self.xOffset = sectionInsets.left;
     self.yOffset = sectionInsets.top;
-    self.maxY = self.yOffset;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     CGSize size = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
     NSInteger count = floor (self.collectionView.bounds.size.width - sectionInsets.left - sectionInsets.right + self.minimumInteritemSpacing) / (size.width + self.minimumInteritemSpacing);
@@ -49,7 +46,6 @@
             attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);
             [self.itemAttributes addObject:attributes];
             self.xOffset = self.xOffset + itemSize.width + self.minimumInteritemSpacing;
-            self.maxY = MAX(self.maxY, itemSize.height);
             if (yOffsetArray.count < self.perLineCount) {
                 [yOffsetArray addObject:@(self.yOffset + itemSize.height)];
             } else {
@@ -58,7 +54,6 @@
         } else {
             self.xOffset = sectionInsets.left;
             self.yOffset = [[yOffsetArray objectAtIndex:(i % self.perLineCount)] floatValue] + self.minimumLineSpacing;
-            self.maxY = itemSize.height;
             UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
             attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);
             [self.itemAttributes addObject:attributes];
@@ -74,7 +69,7 @@
 }
 
 - (CGSize)collectionViewContentSize {
-    return CGSizeMake(self.collectionView.bounds.size.width, self.yOffset + self.maxY);
+    return CGSizeMake(self.collectionView.bounds.size.width, self.yOffset);
 }
 
 @end

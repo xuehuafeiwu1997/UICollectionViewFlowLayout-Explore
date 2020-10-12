@@ -1,10 +1,10 @@
 //
-//  WaterFlowLayoutNew.m
+//  WaterFlowLayoutNew2.m
 //  自定义flowLayout探究
 //
-//  Created by 许明洋 on 2020/9/29.
+//  Created by 许明洋 on 2020/10/12.
 //  Copyright © 2020 许明洋. All rights reserved.
-//适于用可以多列展示时的瀑布流
+//
 
 #import "WaterFlowLayoutNew.h"
 
@@ -14,6 +14,7 @@
 @property (nonatomic) CGFloat xOffset;
 @property (nonatomic) CGFloat yOffset;
 @property (nonatomic) CGFloat maxY;
+@property (nonatomic) NSInteger perLineCount;
 
 @end
 
@@ -27,31 +28,43 @@
     self.xOffset = 0;
     self.yOffset = 0;
     self.maxY = 0;
-    NSInteger sectionCount = [self.collectionView numberOfSections];
-    for (int i = 0; i < sectionCount; i++) {
-        NSInteger itemsCount = [self.collectionView numberOfItemsInSection:i];
-        UIEdgeInsets sectionInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:i];
-        self.xOffset = sectionInsets.left;
-        self.yOffset = sectionInsets.top;
-        self.maxY = self.yOffset;
-        for (int j = 0; j < itemsCount; j++) {
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:j inSection:i];
-            CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
-            if (self.xOffset + sectionInsets.right + itemSize.width <= self.collectionView.bounds.size.width) {
-                UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-                attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);
-                [self.itemAttributes addObject:attributes];
-                self.xOffset = self.xOffset + itemSize.width + self.minimumInteritemSpacing;
-                self.maxY = MAX(self.maxY,itemSize.height);
-            } else {
-                self.xOffset = sectionInsets.left;
-                self.yOffset = self.yOffset + self.minimumLineSpacing + self.maxY;
-                self.maxY = itemSize.height;
-                UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-                attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);
-                [self.itemAttributes addObject:attributes];
-                self.xOffset = self.xOffset + itemSize.width + self.minimumInteritemSpacing;
+    
+    NSInteger itemCount = [self.collectionView numberOfItemsInSection:0];
+    UIEdgeInsets sectionInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:0];
+    self.xOffset = sectionInsets.left;
+    self.yOffset = sectionInsets.top;
+    self.maxY = self.yOffset;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    CGSize size = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
+    NSInteger count = floor (self.collectionView.bounds.size.width - sectionInsets.left - sectionInsets.right + self.minimumInteritemSpacing) / (size.width + self.minimumInteritemSpacing);
+    self.perLineCount = count;
+    NSMutableArray *yOffsetArray = [NSMutableArray arrayWithCapacity:self.perLineCount];
+    for (int i = 0; i < itemCount;i++) {
+        CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        if (self.xOffset + sectionInsets.right + itemSize.width <= self.collectionView.bounds.size.width) {
+            UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (yOffsetArray.count == self.perLineCount) {
+                 self.yOffset = [[yOffsetArray objectAtIndex:(i % self.perLineCount)] floatValue] + self.minimumLineSpacing;
             }
+            attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);
+            [self.itemAttributes addObject:attributes];
+            self.xOffset = self.xOffset + itemSize.width + self.minimumInteritemSpacing;
+            self.maxY = MAX(self.maxY, itemSize.height);
+            if (yOffsetArray.count < self.perLineCount) {
+                [yOffsetArray addObject:@(self.yOffset + itemSize.height)];
+            } else {
+                [yOffsetArray replaceObjectAtIndex:(i % self.perLineCount) withObject:@(self.yOffset + itemSize.height)];
+            }
+        } else {
+            self.xOffset = sectionInsets.left;
+            self.yOffset = [[yOffsetArray objectAtIndex:(i % self.perLineCount)] floatValue] + self.minimumLineSpacing;
+            self.maxY = itemSize.height;
+            UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            attributes.frame = CGRectMake(self.xOffset, self.yOffset, itemSize.width, itemSize.height);
+            [self.itemAttributes addObject:attributes];
+            self.xOffset = self.xOffset + itemSize.width + self.minimumInteritemSpacing;
+            self.yOffset = self.yOffset + itemSize.height;
+            [yOffsetArray replaceObjectAtIndex:(i % self.perLineCount) withObject:@(self.yOffset)];
         }
     }
 }

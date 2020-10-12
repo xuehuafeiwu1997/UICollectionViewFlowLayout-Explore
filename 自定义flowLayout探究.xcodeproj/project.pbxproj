@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		10A06C85D1AA2DE81562BA1D /* libPods-自定义flowLayout探究.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5334C6624F104A1D4869EE /* libPods-自定义flowLayout探究.a */; };
 		B60959E32522CAC1002828D2 /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B60959E22522CAC1002828D2 /* WaterFlowLayout.m */; };
-		B60959E625231A53002828D2 /* WaterFlowLayoutNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */; };
 		B60959E925231CE5002828D2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60959E825231CE5002828D2 /* SecondViewController.m */; };
 		B627B5392521F6F000DED38A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5382521F6F000DED38A /* AppDelegate.m */; };
 		B627B5442521F6F400DED38A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B627B5432521F6F400DED38A /* Assets.xcassets */; };
@@ -18,6 +17,7 @@
 		B627B5522521F72C00DED38A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5512521F72C00DED38A /* MainViewController.m */; };
 		B627B5552521F76E00DED38A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B627B5542521F76E00DED38A /* FirstViewController.m */; };
 		B69044F82531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */; };
+		B6CC4D532534605100C28BB7 /* WaterFlowLayoutNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CC4D522534605100C28BB7 /* WaterFlowLayoutNew.m */; };
 		B6E817CF25305A3D002BE3DD /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E817CE25305A3D002BE3DD /* ThirdViewController.m */; };
 		B6E817D22530645D002BE3DD /* FirstCellZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */; };
 /* End PBXBuildFile section */
@@ -28,8 +28,6 @@
 		6B5334C6624F104A1D4869EE /* libPods-自定义flowLayout探究.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-自定义flowLayout探究.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60959E12522CAC1002828D2 /* WaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
 		B60959E22522CAC1002828D2 /* WaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
-		B60959E425231A53002828D2 /* WaterFlowLayoutNew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayoutNew.h; sourceTree = "<group>"; };
-		B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayoutNew.m; sourceTree = "<group>"; };
 		B60959E725231CE5002828D2 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B60959E825231CE5002828D2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B627B5342521F6F000DED38A /* 自定义flowLayout探究.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义flowLayout探究.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +43,8 @@
 		B627B5542521F76E00DED38A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		B69044F62531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCellZoomInLayoutTwo.h; sourceTree = "<group>"; };
 		B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstCellZoomInLayoutTwo.m; sourceTree = "<group>"; };
+		B6CC4D512534605100C28BB7 /* WaterFlowLayoutNew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayoutNew.h; sourceTree = "<group>"; };
+		B6CC4D522534605100C28BB7 /* WaterFlowLayoutNew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayoutNew.m; sourceTree = "<group>"; };
 		B6E817CD25305A3D002BE3DD /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		B6E817CE25305A3D002BE3DD /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		B6E817D02530645D002BE3DD /* FirstCellZoomInLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCellZoomInLayout.h; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 			children = (
 				B60959E725231CE5002828D2 /* SecondViewController.h */,
 				B60959E825231CE5002828D2 /* SecondViewController.m */,
-				B60959E425231A53002828D2 /* WaterFlowLayoutNew.h */,
-				B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */,
+				B6CC4D512534605100C28BB7 /* WaterFlowLayoutNew.h */,
+				B6CC4D522534605100C28BB7 /* WaterFlowLayoutNew.m */,
 			);
 			path = "瀑布流不规则高度和宽度多列布局";
 			sourceTree = "<group>";
@@ -247,9 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B627B5392521F6F000DED38A /* AppDelegate.m in Sources */,
+				B6CC4D532534605100C28BB7 /* WaterFlowLayoutNew.m in Sources */,
 				B627B5522521F72C00DED38A /* MainViewController.m in Sources */,
 				B6E817CF25305A3D002BE3DD /* ThirdViewController.m in Sources */,
-				B60959E625231A53002828D2 /* WaterFlowLayoutNew.m in Sources */,
 				B60959E925231CE5002828D2 /* SecondViewController.m in Sources */,
 				B627B54A2521F6F400DED38A /* main.m in Sources */,
 				B627B5552521F76E00DED38A /* FirstViewController.m in Sources */,

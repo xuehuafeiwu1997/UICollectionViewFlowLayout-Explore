@@ -13,7 +13,6 @@
 @interface SecondViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,WaterFlowLayoutNewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray *widthArray;//用于存储宽度数据
 @property (nonatomic, strong) NSMutableArray *heightArray;//用于存储高度数据
 
 @end
@@ -37,7 +36,6 @@
     if (_collectionView) {
         return _collectionView;
     }
-//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     WaterFlowLayoutNew *layout = [[WaterFlowLayoutNew alloc] init];
     layout.delegate = self;
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
@@ -84,18 +82,10 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    float width = [[self.widthArray objectAtIndex:indexPath.row] floatValue];
-//    float width = self.view.bounds.size.width - 10 * 2 - 10 * 2;
+    NSInteger count = 3;//每行排列的cell的个数
+    float width = self.view.bounds.size.width - 10 * 2  - 10 * (count - 1);
     float height = [[self.heightArray objectAtIndex:indexPath.row] floatValue];
-    return CGSizeMake(width , height);
-}
-
-- (NSMutableArray *)widthArray {
-    if (_widthArray) {
-        return _widthArray;
-    }
-    _widthArray = [NSMutableArray arrayWithObjects:@(50),@(100),@(150),@(200),@(150),@(100),@(85),@(100),@(50),@(100),nil];
-    return _widthArray;
+    return CGSizeMake(width / count, height);
 }
 
 - (NSMutableArray *)heightArray {

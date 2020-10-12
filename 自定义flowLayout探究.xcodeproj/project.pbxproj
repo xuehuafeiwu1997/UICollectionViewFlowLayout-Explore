@@ -101,30 +101,54 @@
 		B627B5362521F6F000DED38A /* 自定义flowLayout探究 */ = {
 			isa = PBXGroup;
 			children = (
+				B690452C2534508C0056CA2A /* 横向滑动第一个cell放大 */,
+				B690452B253450660056CA2A /* 瀑布流不规则高度和宽度多列布局 */,
+				B690452A253450460056CA2A /* 瀑布流不规则高度两列布局 */,
 				B627B5372521F6F000DED38A /* AppDelegate.h */,
 				B627B5382521F6F000DED38A /* AppDelegate.m */,
 				B627B5502521F72C00DED38A /* MainViewController.h */,
 				B627B5512521F72C00DED38A /* MainViewController.m */,
-				B627B5532521F76E00DED38A /* FirstViewController.h */,
-				B627B5542521F76E00DED38A /* FirstViewController.m */,
-				B60959E725231CE5002828D2 /* SecondViewController.h */,
-				B60959E825231CE5002828D2 /* SecondViewController.m */,
-				B6E817CD25305A3D002BE3DD /* ThirdViewController.h */,
-				B6E817CE25305A3D002BE3DD /* ThirdViewController.m */,
-				B60959E12522CAC1002828D2 /* WaterFlowLayout.h */,
-				B60959E22522CAC1002828D2 /* WaterFlowLayout.m */,
-				B60959E425231A53002828D2 /* WaterFlowLayoutNew.h */,
-				B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */,
-				B6E817D02530645D002BE3DD /* FirstCellZoomInLayout.h */,
-				B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */,
-				B69044F62531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.h */,
-				B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */,
 				B627B5432521F6F400DED38A /* Assets.xcassets */,
 				B627B5452521F6F400DED38A /* LaunchScreen.storyboard */,
 				B627B5482521F6F400DED38A /* Info.plist */,
 				B627B5492521F6F400DED38A /* main.m */,
 			);
 			path = "自定义flowLayout探究";
+			sourceTree = "<group>";
+		};
+		B690452A253450460056CA2A /* 瀑布流不规则高度两列布局 */ = {
+			isa = PBXGroup;
+			children = (
+				B60959E12522CAC1002828D2 /* WaterFlowLayout.h */,
+				B60959E22522CAC1002828D2 /* WaterFlowLayout.m */,
+				B627B5532521F76E00DED38A /* FirstViewController.h */,
+				B627B5542521F76E00DED38A /* FirstViewController.m */,
+			);
+			path = "瀑布流不规则高度两列布局";
+			sourceTree = "<group>";
+		};
+		B690452B253450660056CA2A /* 瀑布流不规则高度和宽度多列布局 */ = {
+			isa = PBXGroup;
+			children = (
+				B60959E725231CE5002828D2 /* SecondViewController.h */,
+				B60959E825231CE5002828D2 /* SecondViewController.m */,
+				B60959E425231A53002828D2 /* WaterFlowLayoutNew.h */,
+				B60959E525231A53002828D2 /* WaterFlowLayoutNew.m */,
+			);
+			path = "瀑布流不规则高度和宽度多列布局";
+			sourceTree = "<group>";
+		};
+		B690452C2534508C0056CA2A /* 横向滑动第一个cell放大 */ = {
+			isa = PBXGroup;
+			children = (
+				B6E817CD25305A3D002BE3DD /* ThirdViewController.h */,
+				B6E817CE25305A3D002BE3DD /* ThirdViewController.m */,
+				B6E817D02530645D002BE3DD /* FirstCellZoomInLayout.h */,
+				B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */,
+				B69044F62531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.h */,
+				B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */,
+			);
+			path = "横向滑动第一个cell放大";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

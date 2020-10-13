@@ -19,7 +19,6 @@
 		B69044F82531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */; };
 		B6CC4D532534605100C28BB7 /* WaterFlowLayoutNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CC4D522534605100C28BB7 /* WaterFlowLayoutNew.m */; };
 		B6E817CF25305A3D002BE3DD /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E817CE25305A3D002BE3DD /* ThirdViewController.m */; };
-		B6E817D22530645D002BE3DD /* FirstCellZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +46,6 @@
 		B6CC4D522534605100C28BB7 /* WaterFlowLayoutNew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayoutNew.m; sourceTree = "<group>"; };
 		B6E817CD25305A3D002BE3DD /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		B6E817CE25305A3D002BE3DD /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		B6E817D02530645D002BE3DD /* FirstCellZoomInLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCellZoomInLayout.h; sourceTree = "<group>"; };
-		B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstCellZoomInLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +140,6 @@
 			children = (
 				B6E817CD25305A3D002BE3DD /* ThirdViewController.h */,
 				B6E817CE25305A3D002BE3DD /* ThirdViewController.m */,
-				B6E817D02530645D002BE3DD /* FirstCellZoomInLayout.h */,
-				B6E817D12530645D002BE3DD /* FirstCellZoomInLayout.m */,
 				B69044F62531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.h */,
 				B69044F72531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m */,
 			);
@@ -254,7 +249,6 @@
 				B627B54A2521F6F400DED38A /* main.m in Sources */,
 				B627B5552521F76E00DED38A /* FirstViewController.m in Sources */,
 				B60959E32522CAC1002828D2 /* WaterFlowLayout.m in Sources */,
-				B6E817D22530645D002BE3DD /* FirstCellZoomInLayout.m in Sources */,
 				B69044F82531A5AE0056CA2A /* FirstCellZoomInLayoutTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

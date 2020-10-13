@@ -52,15 +52,6 @@
     return YES;
 }
 
-//这个方法不会被调用
-//- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset {
-//    UIEdgeInsets sectionInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:0];
-//    CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-//    CGSize firstSize = [self.delegate sizeForFirstCell];
-////    CGSize firstCellFrame = CGRectMake(proposedContentOffset.x , <#CGFloat y#>, <#CGFloat width#>,)
-//    return proposedContentOffset;
-//}
-
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     UIEdgeInsets sectionInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:0];
     CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];

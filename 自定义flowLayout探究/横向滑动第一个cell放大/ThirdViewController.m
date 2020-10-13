@@ -8,10 +8,9 @@
 
 #import "ThirdViewController.h"
 #import "Masonry.h"
-#import "FirstCellZoomInLayout.h"
 #import "FirstCellZoomInLayoutTwo.h"
 
-@interface ThirdViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FirstCellZoomInLayoutDelegate,FirstCellZoomInLayoutTwoDelegate>
+@interface ThirdViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FirstCellZoomInLayoutTwoDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -80,8 +79,6 @@
     if (_collectionView) {
         return _collectionView;
     }
-//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-//    FirstCellZoomInLayout *layout = [[FirstCellZoomInLayout alloc] init];
     FirstCellZoomInLayoutTwo *layout = [[FirstCellZoomInLayoutTwo alloc] init];
     layout.delegate = self;
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];

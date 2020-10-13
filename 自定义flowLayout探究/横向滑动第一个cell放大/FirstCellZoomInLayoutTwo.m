@@ -55,7 +55,7 @@
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     UIEdgeInsets sectionInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:0];
     CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    CGFloat adjustOffsetX = CGFLOAT_MAX;
+//    CGFloat adjustOffsetX = CGFLOAT_MAX;
     CGFloat finalPointX = 0;
     /*
      需要尝试一下有没有其他的思路和方法
